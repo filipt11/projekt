@@ -15,7 +15,7 @@ bool is_prime(int n){
 }
 
 int main() {
-    int a, b;
+    int a, b,n;
     cout << "Podaj liczbe calkowita ";
     cin >> a >> b;
     int wyjscie;
@@ -25,7 +25,16 @@ int main() {
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+	cout << "1. is_prime" << endl;
         cin >> wyjscie;
+	if(wyjscie==1){
+		if(isprime(n)){
+			cout<<"Tak"<<endl;
+		}
+		else{
+			cout<<"Nie"<<endl;
+		}
+	}
     } while(wyjscie != 0);
     return 0;
 }
