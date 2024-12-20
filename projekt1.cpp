@@ -2,6 +2,18 @@
 
 using namespace std;
 
+bool is_prime(int n){
+	if(n<2)
+		return false;
+	if(n==2)
+		return true;
+	for(int i=3;i*i<=n;i=i+2){
+		if(n%i==0)
+			return false;
+	}
+	return true;
+}
+
 int main() {
     int a, b;
     cout << "Podaj liczbe calkowita ";
